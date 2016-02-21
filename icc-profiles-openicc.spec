@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1.3.1
-Release:        5.9%{?dist}
+Release:        5.10%{?dist}
 Summary:        The OpenICC profiles
 
 License:        zlib
@@ -13,8 +13,8 @@ Source0:        http://downloads.sourceforge.net/project/openicc/OpenICC-Profile
 
 BuildArch:      noarch
 
-BuildRequires:  maven30-color-filesystem
-Requires:       maven30-color-filesystem
+BuildRequires:  %{?scl_prefix}color-filesystem
+Requires:       %{?scl_prefix}color-filesystem
 
 
 %description
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/{icons,pixmaps,mime}
 
 
 %changelog
+* Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1.3.1-5.10
+- maven33 rebuild #2
+
 * Sat Jan 09 2016 Michal Srb <msrb@redhat.com> - 1.3.1-5.9
 - maven33 rebuild
 
