@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1.3.1
-Release:        5.10%{?dist}
+Release:        5.11%{?dist}
 Summary:        The OpenICC profiles
 
 License:        zlib
@@ -71,6 +71,9 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/{icons,pixmaps,mime}
 
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 1.3.1-5.11
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1.3.1-5.10
 - maven33 rebuild #2
 
